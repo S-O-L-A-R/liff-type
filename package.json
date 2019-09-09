@@ -1,0 +1,23 @@
+{
+  "name": "liff-type",
+  "version": "0.0.9",
+  "description": "Type definition for LINE Frontend Framework",
+  "types": "index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-O-L-A-R/liff-type.git"
+  },
+  "keywords": [
+    "liff",
+    "line"
+  ],
+  "author": "S-O-L-A-R",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/S-O-L-A-R/liff-type/issues"
+  },
+  "homepage": "https://github.com/S-O-L-A-R/liff-type#readme",
+  "dependencies": {
+    "@line/bot-sdk": "^6.8.2"
+  }
+}

@@ -9,12 +9,12 @@ npm i -D liff-type
 
 ### Usage
 
-Apply `/// <reference types="liff-type" />` on top of your file that using `liff`
+In `.tsconfig`, add `liff-type` to `types` in `compilerOptions`
 
-E.g.
-
-```ts
-/// <reference types="liff-type" />
-
-liff.getProfile()
+```
+{
+    "compilerOptions": {
+        "types": ["liff-type"]
+    }
+}
 ```

@@ -64,29 +64,31 @@ declare interface BluetoothDevice {
     removeEventListener(event: EventListener)
 }
 
-declare namespace liff {
-    function init(
-        initSuccessCallback: LiffInitSuccessCallback,
-        errorCallback: LiffInitErrorCallback,
-    ): void;
-
-    function openWindow(params: {
-        url: string,
-        external?: boolean
-    }): void;
+declare global {
+    namespace liff {
+        function init(
+            initSuccessCallback: LiffInitSuccessCallback,
+            errorCallback: LiffInitErrorCallback,
+        ): void;
     
-    function getAccessToken(): string;
-    
-    function getProfile(): Promise<LINE.Profile>;
-    
-    function sendMessages(messages: LINE.Message[]): Promise<void>;
-    
-    function closeWindow(): void;
-    
-    function initPlugins(plugins: LIFFPlugins[]): Promise<void>;
-    
-    const bluetooth: {
-        getAvailability(): Promise<boolean>
-        requestDevice(options?: LIFFRequestDeviceOptions): Promise<BluetoothDevice>
-    }
+        function openWindow(params: {
+            url: string,
+            external?: boolean
+        }): void;
+        
+        function getAccessToken(): string;
+        
+        function getProfile(): Promise<LINE.Profile>;
+        
+        function sendMessages(messages: LINE.Message[]): Promise<void>;
+        
+        function closeWindow(): void;
+        
+        function initPlugins(plugins: LIFFPlugins[]): Promise<void>;
+        
+        const bluetooth: {
+            getAvailability(): Promise<boolean>
+            requestDevice(options?: LIFFRequestDeviceOptions): Promise<BluetoothDevice>
+        }
+    }    
 }

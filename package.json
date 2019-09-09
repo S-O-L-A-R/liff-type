@@ -1,6 +1,6 @@
 {
   "name": "liff-type",
-  "version": "0.0.9",
+  "version": "0.0.1",
   "description": "Type definition for LINE Frontend Framework",
   "types": "index",
   "repository": {
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/S-O-L-A-R/liff-type#readme",
   "dependencies": {
     "@line/bot-sdk": "^6.8.2"
+  },
+  "devDependencies": {
+    "standard-version": "^7.0.0"
   }
 }

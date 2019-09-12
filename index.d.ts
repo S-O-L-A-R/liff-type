@@ -56,7 +56,7 @@ declare interface BluetoothRemoteGATTServer {
 declare interface BluetoothDevice {
     id: string
     name?: string
-    gatt?: any
+    gatt?: BluetoothRemoteGATTServer
     watchingAdvertisements: boolean
     watchAdvertisements(): Promise<void>
     unwatchAdvertisements(): void

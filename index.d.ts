@@ -1,6 +1,15 @@
 /// <reference types="@line/bot-sdk" />
 import LINE = require('@line/bot-sdk')
 
+declare type LIFFConfig = {
+    liffId: string,
+}
+
+declare type LIFFErrorObject = {
+    code: 'INIT_FAILED' | 'INVALID_ARGUMENT' | 'UNAUTHORIZED' | 'FORBIDDEN' | 'INVALID_CONFIG' | 'INVALID_ID_TOKEN' | 'INVALID_ARGUMENT' | 'THINGS_NO_LINKED_DEVICES' | 'BLUETOOTH_SETTING_OFF' | 'THINGS_TERMS_NOT_AGREED' | 'BLUETOOTH_NO_LOCATION_PERMISSION' | 'BLUETOOTH_LOCATION_DISABLED' | 'BLUETOOTH_LE_API_UNAVAILABLE' | 'BLUETOOTH_CONNECT_FAILED' | 'BLUETOOTH_ALREADY_CONNECTED' | 'BLUETOOTH_CONNECTION_LOST' | 'BLUETOOTH_UNSUPPORTED_OPERATION' | 'BLUETOOTH_SERVICE_NOT_FOUND' | 'BLUETOOTH_CHARACTERISTIC_NOT_FOUND',
+    message: string,
+}
+
 declare type LiffInitSuccessCallback = (
     data: {
         language: string,
@@ -15,7 +24,7 @@ declare type LiffInitSuccessCallback = (
     }
 ) => void
 
-declare type LiffInitErrorCallback = (error: Error) => void
+declare type LiffInitErrorCallback = (error: LIFFErrorObject) => void
 
 declare type LIFFPlugins = 'bluetooth'
 
@@ -64,13 +73,32 @@ declare interface BluetoothDevice {
     removeEventListener(event: EventListener)
 }
 
+declare type LIFFLoginConfig = {
+    redirectUri?: string
+}
+
 declare global {
     namespace liff {
         function init(
-            initSuccessCallback: LiffInitSuccessCallback,
-            errorCallback: LiffInitErrorCallback,
-        ): void;
-    
+            config: LIFFConfig,
+            initSuccessCallback?: LiffInitSuccessCallback,
+            errorCallback?: LiffInitErrorCallback,
+        ): Promise<void>;
+        
+        function getOS(): 'ios' | 'android' | 'web'
+
+        function getVersion(): string
+
+        function getLanguage(): string
+
+        function isInClient(): boolean
+
+        function isLoggedIn(): boolean
+
+        function login(config: LIFFLoginConfig): void
+
+        function logout(): void
+
         function openWindow(params: {
             url: string,
             external?: boolean
@@ -82,6 +110,8 @@ declare global {
         
         function sendMessages(messages: LINE.Message[]): Promise<void>;
         
+        function scanCode(): Promise<string>
+
         function closeWindow(): void;
         
         function initPlugins(plugins: LIFFPlugins[]): Promise<void>;

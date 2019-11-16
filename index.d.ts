@@ -70,7 +70,7 @@ declare interface BluetoothDevice {
     watchAdvertisements(): Promise<void>
     unwatchAdvertisements(): void
     addEventListener(eventName: string, event: EventListener): void
-    removeEventListener(event: EventListener)
+    removeEventListener(event: EventListener): void
 }
 
 declare type LIFFLoginConfig = {
@@ -95,7 +95,7 @@ declare global {
 
         function isLoggedIn(): boolean
 
-        function login(config: LIFFLoginConfig): void
+        function login(config?: LIFFLoginConfig): void
 
         function logout(): void
 

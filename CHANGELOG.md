@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.0...v2.0.1) (2019-11-20)
+
+
+### Bug Fixes
+
+* Fix invalid types ([45604c3](https://github.com/S-O-L-A-R/liff-type/commit/45604c3))
+
 ## [2.0.0](https://github.com/S-O-L-A-R/liff-type/compare/v1.1.1...v2.0.0) (2019-10-18)
 
 

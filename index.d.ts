@@ -77,6 +77,10 @@ declare type LIFFLoginConfig = {
     redirectUri?: string
 }
 
+declare interface scanCodeResult {
+    value: string | null
+}
+
 declare global {
     namespace liff {
         function init(
@@ -110,7 +114,7 @@ declare global {
         
         function sendMessages(messages: LINE.Message[]): Promise<void>;
         
-        function scanCode(): Promise<string>
+        function scanCode(): Promise<scanCodeResult>
 
         function closeWindow(): void;
         

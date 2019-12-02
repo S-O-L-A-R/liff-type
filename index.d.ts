@@ -81,6 +81,18 @@ declare interface scanCodeResult {
     value: string | null
 }
 
+declare interface LiffDecodedProfile {
+    amr: string[]
+    aud: string
+    email: string
+    exp: number
+    iat: number
+    iss: string
+    name: string
+    picture: string
+    sub: string
+}
+
 declare global {
     namespace liff {
         function init(
@@ -120,6 +132,8 @@ declare global {
         
         function initPlugins(plugins: LIFFPlugins[]): Promise<void>;
         
+        function getDecodedIDToken(): Promise<LiffDecodedProfile>;
+
         const bluetooth: {
             getAvailability(): Promise<boolean>
             requestDevice(options?: LIFFRequestDeviceOptions): Promise<BluetoothDevice>

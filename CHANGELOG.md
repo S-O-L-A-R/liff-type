@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.2...v2.0.3) (2019-12-03)
+
+
+### Features
+
+* Add decoded profile type ([0ba7d05](https://github.com/S-O-L-A-R/liff-type/commit/0ba7d05))
+
 ### [2.0.2](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.1...v2.0.2) (2019-11-27)
 
 

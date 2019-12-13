@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.3...v2.0.4) (2019-12-13)
+
+
+### Features
+
+* Add Example in Readme ([9c00b7c](https://github.com/S-O-L-A-R/liff-type/commit/9c00b7c))
+* getFriendship typedef ([eccd825](https://github.com/S-O-L-A-R/liff-type/commit/eccd825))
+
 ### [2.0.3](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.2...v2.0.3) (2019-12-03)
 
 

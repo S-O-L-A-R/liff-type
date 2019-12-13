@@ -93,6 +93,10 @@ declare interface LiffDecodedProfile {
     sub: string
 }
 
+declare interface Friendship {
+    friendFlag: boolean
+}
+
 declare global {
     namespace liff {
         function init(
@@ -133,6 +137,8 @@ declare global {
         function initPlugins(plugins: LIFFPlugins[]): Promise<void>;
         
         function getDecodedIDToken(): Promise<LiffDecodedProfile>;
+
+        function getFriendship(): Promise<Friendship>;
 
         const bluetooth: {
             getAvailability(): Promise<boolean>

@@ -112,19 +112,6 @@ declare global {
          * @param config - LIFF app ID. Can be obtained when you add the LIFF app to your channel. 
          * @param initSuccessCallback - Callback to return a data object upon successful initialization of the LIFF app.
          * @param errorCallback - Callback to return an error object upon failure to initialize the LIFF app.
-         * @example
-         * ```
-         * liff.init({
-         *  liffId: "1234567890-abcdefgh" // use own liffId
-         * })
-         * .then(() => {
-         *   // Start to use liff's api
-         * })
-         * .catch((err: LIFFErrorObject) => {
-         *   // Error happens during initialization
-         *   console.log(err.code, err.message);
-         * });
-         * ```
          * 
          * @returns a Promise object.
          */
@@ -154,15 +141,13 @@ declare global {
 
         /**
          * Determines whether the LIFF app is running in LINE's in-app browser.
-         * @returns `true`: Running in LINE browser, `false`: Running in external browser
+         * @returns true: Running in LINE browser, false: Running in external browser
          */
         function isInClient(): boolean
 
         /**
          * Checks whether the user is logged in.
-         * @returns `true`: The user is logged in
-         *
-         * `false`: The user is not logged in
+         * @returns true: The user is logged in, false: The user is not logged in
          */
         function isLoggedIn(): boolean
 

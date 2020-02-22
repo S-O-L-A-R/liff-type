@@ -113,7 +113,6 @@ declare global {
          * @param initSuccessCallback - Callback to return a data object upon successful initialization of the LIFF app.
          * @param errorCallback - Callback to return an error object upon failure to initialize the LIFF app.
          * 
-         * @returns a Promise object.
          */
         function init(
             config: LIFFConfig,
@@ -123,37 +122,31 @@ declare global {
         
         /**
          * Gets the environment in which the user is running the LIFF app.
-         * @returns The environment in which the user is running the LIFF app is returned as a string.
          */
         function getOS(): 'ios' | 'android' | 'web'
 
         /**
          * Gets the version of the LIFF SDK.
-         * @returns The version of the LIFF SDK is returned as a string.
          */
         function getVersion(): string
 
         /**
-         * Gets the language settings of the environment in which the LIFF app is running.\
-         * @returns String containing language settings specified in `navigator.language` in the LIFF app's running environment.
+         * Gets the language settings of the environment in which the LIFF app is running.
          */
         function getLanguage(): string
 
         /**
          * Determines whether the LIFF app is running in LINE's in-app browser.
-         * @returns true: Running in LINE browser, false: Running in external browser
          */
         function isInClient(): boolean
 
         /**
          * Checks whether the user is logged in.
-         * @returns true: The user is logged in, false: The user is not logged in
          */
         function isLoggedIn(): boolean
 
         /**
          * Performs the LINE Login process (web login) for the Web app.
-         * @param config - config.redirectUri `redirectUri`: URL to open in the LIFF app after LINE Login.
          * 
          */
         function login(config?: LIFFLoginConfig): void
@@ -165,7 +158,6 @@ declare global {
 
         /**
          * Opens the specified URL in the in-app browser of LINE or external browser.
-         * @param params - Params object including `url` (required) and `external` (optional)
          */
         function openWindow(params: {
             url: string,
@@ -174,19 +166,16 @@ declare global {
         
         /**
          * Gets the current user's access token.
-         * @returns the current user's access token as a string.
          */
         function getAccessToken(): string;
         
         /**
          * Gets the current user's profile.
-         * @returns a Promise object that contains the user's profile information.
          */
         function getProfile(): Promise<LINE.Profile>;
         
         /**
-         * Sends messages on behalf of the user to the chat screen where the LIFF app is opened. If the LIFF app is opened on a screen other than the chat screen, messages cannot be sent.
-         * @param messages - array of message object
+         * Sends messages on behalf of the user to the chat screen where the LIFF app is opened.
          */
         function sendMessages(messages: LINE.Message[]): Promise<void>;
         
@@ -205,36 +194,30 @@ declare global {
          *
          * For example, if you enable the Bluetooth plugin, you can use the client API (liff.bluetooth.*) provided by the Bluetooth plugin.
          * @param plugins - Plugin name. Specify one of the following values: `bluetooth`
-         * @returns There is no return value if the plugin is enabled successfully.
          *
-         * If you fail to enable the plugins, a Promise object containing the error information is returned.
          */
         function initPlugins(plugins: LIFFPlugins[]): Promise<void>;
         
         /**
          * Gets the payload of the ID token that's automatically acquired by `liff.init()` The payload includes the user display name, profile image URL, and email address.
-         * @returns Gets a Promise object containing the ID token payload.
          */
         function getDecodedIDToken(): Promise<LiffDecodedProfile>;
 
         /**
          * Gets the friendship status of the LINE Official Account that's linked to the LINE Login channel to which the LIFF app is added.
-         * @returns a Promise object that specifies the status of the friendship.
          */
         function getFriendship(): Promise<Friendship>;
 
         const bluetooth: {
             /**
              * Check if the Bluetooth plugin can be used.
-             * @returns a Promise object. The Promise object contains a Boolean object indicating whether or not the Bluetooth plugin can be used.
              */
             getAvailability(): Promise<boolean>
             /**
              * Scans the linked device, and acquires the information.
              * @param options
-             * @returns a Promise object. The Promise object contains the BluetoothDeviceobject indicating information about the devices.
              */
             requestDevice(options?: LIFFRequestDeviceOptions): Promise<BluetoothDevice>
         }
-    }    
+    }
 }

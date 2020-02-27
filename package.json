@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "standard-version": "^7.0.0"
+  },
+  "scripts": {
+    "release": "standard-version --release-as"
   }
 }

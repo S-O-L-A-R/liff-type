@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.6](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.5...v2.0.6) (2020-02-27)
+
+
+### Features
+
+* add types for getContext function ([d8919bf](https://github.com/S-O-L-A-R/liff-type/commit/d8919bf92a718ae5f955eaec02ba29729cda2124))
+
 ### [2.0.5](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.4...v2.0.5) (2020-02-23)
 
 

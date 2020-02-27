@@ -104,6 +104,15 @@ declare interface Friendship {
     friendFlag: boolean
 }
 
+declare type LiffContextData = {
+    type: 'utou' | 'room' | 'group' | 'none',
+    viewType: 'compact' | 'tall' | 'full',
+    userId?: string,
+    utouId?: string,
+    roomId?: string,
+    groupId?: string,
+ }
+
 declare global {
     namespace liff {
         /**
@@ -155,6 +164,11 @@ declare global {
          * Logs out.
          */
         function logout(): void
+
+        /**
+         * Gets the screen type (1-on-1 chat, group, or room) and the ID that identifies the screen from which the LIFF application is launched.
+         */
+        function getContext(): LiffContextData
 
         /**
          * Opens the specified URL in the in-app browser of LINE or external browser.

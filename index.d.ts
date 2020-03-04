@@ -222,6 +222,17 @@ declare global {
          */
         function getFriendship(): Promise<Friendship>;
 
+        /**
+         * Displays the target picker (screen for selecting a group or friend) and sends the message created by the developer to the selected target. This message appears to your group or friends as if you had sent it.
+         * @param messages - maximum 5 messages
+         */
+        function shareTargetPicker(messages: LINE.Message[]): Promise<void>;
+
+        /**
+         * Gets the Promise object that resolves when you run liff.init() for the first time after starting the LIFF app. If you use liff.ready, you can execute any process after the completion of liff.init().
+         */
+        function ready(): Promise<void>;
+
         const bluetooth: {
             /**
              * Check if the Bluetooth plugin can be used.

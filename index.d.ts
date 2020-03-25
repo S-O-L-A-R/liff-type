@@ -231,7 +231,7 @@ declare global {
         /**
          * Gets the Promise object that resolves when you run liff.init() for the first time after starting the LIFF app. If you use liff.ready, you can execute any process after the completion of liff.init().
          */
-        function ready(): Promise<void>;
+        const ready: Promise<void>;
 
         const bluetooth: {
             /**

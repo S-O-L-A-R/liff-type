@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.8](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.7...v2.0.8) (2020-03-26)
+
+
+### Bug Fixes
+
+* Correct type of liff.ready ([fe14dbd](https://github.com/S-O-L-A-R/liff-type/commit/fe14dbd01bede9015ca598c316737e2763c2e742))
+
 ### [2.0.7](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.6...v2.0.7) (2020-03-04)
 
 

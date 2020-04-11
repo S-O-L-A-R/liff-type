@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.8...v2.1.0) (2020-04-11)
+
+
+### Features
+
+* New LIFF API 2.1.12 [ liff.isApiAvailable() ] ([843e838](https://github.com/S-O-L-A-R/liff-type/commit/843e838446e6a04e4bdaee8a48b2926b3ddebb91))
+
 ### [2.0.8](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.7...v2.0.8) (2020-03-26)
 
 

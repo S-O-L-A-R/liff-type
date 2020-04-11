@@ -155,6 +155,11 @@ declare global {
         function isLoggedIn(): boolean
 
         /**
+         * Checks whether the specified API is available in the environment where you started the LIFF app.
+         */
+        function isApiAvailable(apiName: string): boolean
+
+        /**
          * Performs the LINE Login process (web login) for the Web app.
          * 
          */

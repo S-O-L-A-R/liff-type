@@ -1,6 +1,6 @@
 {
   "name": "liff-type",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Type definition for LINE Frontend Framework",
   "types": "index",
   "repository": {

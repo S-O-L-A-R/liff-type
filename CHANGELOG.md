@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/S-O-L-A-R/liff-type/compare/v2.1.0...v2.1.1) (2020-04-14)
+
+
+### Features
+
+* Add missing function [ liff.getIDToken() ] ([0fc2d13](https://github.com/S-O-L-A-R/liff-type/commit/0fc2d13cdd8d422cd77d31db512ca5ac46c836db))
+
 ## [2.1.0](https://github.com/S-O-L-A-R/liff-type/compare/v2.0.8...v2.1.0) (2020-04-11)
 
 

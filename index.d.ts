@@ -216,6 +216,11 @@ declare global {
          *
          */
         function initPlugins(plugins: LIFFPlugins[]): Promise<void>;
+
+        /**
+         * Gets the ID token.
+         */
+        function getIDToken(): string;
         
         /**
          * Gets the payload of the ID token that's automatically acquired by `liff.init()` The payload includes the user display name, profile image URL, and email address.

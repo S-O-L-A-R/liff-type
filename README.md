@@ -1,4 +1,10 @@
 # liff-type
+
+[![npm version](https://badge.fury.io/js/liff-type.svg)](https://badge.fury.io/js/liff-type) [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/microsoft/TypeScript)
+
+
+
+
 Type definition for LINE Frontend Framework
 
 ### Installation

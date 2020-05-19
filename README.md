@@ -28,3 +28,9 @@ In `.tsconfig`, add `liff-type` to `types` in `compilerOptions`
 In your code, you can access `liff` directly as global variable without window! 
 
 ![example](doc/example.png)
+
+### Versioning
+
+Major and Minor Version are matched with LIFF SDK.
+
+Patch is bug fixed or improvement.

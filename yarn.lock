@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@line/bot-sdk@^6.8.2":
+"@line/bot-sdk@^6.8.4":
   version "6.8.4"
-  resolved "https://registry.npmjs.org/@line/bot-sdk/-/bot-sdk-6.8.4.tgz#9262ff5989d48edba35c851f7401a6e26d83c32d"
+  resolved "https://registry.yarnpkg.com/@line/bot-sdk/-/bot-sdk-6.8.4.tgz#9262ff5989d48edba35c851f7401a6e26d83c32d"
   integrity sha512-ul0GT9CHW2A5K3xUi6BRuFSWZfePXcnArFFeDtf4wbLhVMZoO3yyslrEaDuNt4UiKYK1BxU09LvXNU7/ha4i9w==
   dependencies:
     "@types/body-parser" "^1.17.1"

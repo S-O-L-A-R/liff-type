@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/S-O-L-A-R/liff-type/compare/v2.1.1...v2.1.2) (2020-05-20)
+
+
+### Features
+
+* Exclude ImageMap from LIFF Message type and type guard for messages at shareTargetPicker. ([#19](https://github.com/S-O-L-A-R/liff-type/issues/19)) ([c950724](https://github.com/S-O-L-A-R/liff-type/commit/c9507247cff593675dfb54ffb18963d6da992ab5))
+
 ### [2.1.1](https://github.com/S-O-L-A-R/liff-type/compare/v2.1.0...v2.1.1) (2020-04-14)
 
 

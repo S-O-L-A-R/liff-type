@@ -115,6 +115,8 @@ declare type LiffContextData = {
 
 declare type LIFFMessage = Exclude<LINE.Message, LINE.ImageMapMessage>
 
+declare type LIFFMessages = [LIFFMessage?, LIFFMessage?, LIFFMessage?, LIFFMessage?, LIFFMessage?]
+
 declare global {
     namespace liff {
         /**
@@ -198,7 +200,7 @@ declare global {
         /**
          * Sends messages on behalf of the user to the chat screen where the LIFF app is opened.
          */
-        function sendMessages(messages: LIFFMessage[]): Promise<void>;
+        function sendMessages(messages: LIFFMessages): Promise<void>;
         
         /**
          * Starts LINE's QR code reader and gets the string read by the user. To start the QR code reader, grant ScanQR permission to the LIFF app in the LINE Developers Console.
@@ -238,7 +240,7 @@ declare global {
          * Displays the target picker (screen for selecting a group or friend) and sends the message created by the developer to the selected target. This message appears to your group or friends as if you had sent it.
          * @param messages - maximum 5 messages
          */
-        function shareTargetPicker(messages: [LIFFMessage?, LIFFMessage?, LIFFMessage?, LIFFMessage?, LIFFMessage?]): Promise<void>;
+        function shareTargetPicker(messages: LIFFMessages): Promise<void>;
 
         /**
          * Gets the Promise object that resolves when you run liff.init() for the first time after starting the LIFF app. If you use liff.ready, you can execute any process after the completion of liff.init().

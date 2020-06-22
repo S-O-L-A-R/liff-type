@@ -6,11 +6,11 @@ declare type LIFFConfig = {
 }
 
 declare type LIFFErrorObject = {
-    code: 'INIT_FAILED' | 'INVALID_ARGUMENT' | 'UNAUTHORIZED' | 'FORBIDDEN' | 
-        'INVALID_CONFIG' | 'INVALID_ID_TOKEN' | 'THINGS_NO_LINKED_DEVICES' | 
-        'BLUETOOTH_SETTING_OFF' | 'THINGS_TERMS_NOT_AGREED' | 'BLUETOOTH_NO_LOCATION_PERMISSION' | 
-        'BLUETOOTH_LOCATION_DISABLED' | 'BLUETOOTH_LE_API_UNAVAILABLE' | 'BLUETOOTH_CONNECT_FAILED' | 
-        'BLUETOOTH_ALREADY_CONNECTED' | 'BLUETOOTH_CONNECTION_LOST' | 'BLUETOOTH_UNSUPPORTED_OPERATION' | 
+    code: 'INIT_FAILED' | 'INVALID_ARGUMENT' | 'UNAUTHORIZED' | 'FORBIDDEN' |
+        'INVALID_CONFIG' | 'INVALID_ID_TOKEN' | 'THINGS_NO_LINKED_DEVICES' |
+        'BLUETOOTH_SETTING_OFF' | 'THINGS_TERMS_NOT_AGREED' | 'BLUETOOTH_NO_LOCATION_PERMISSION' |
+        'BLUETOOTH_LOCATION_DISABLED' | 'BLUETOOTH_LE_API_UNAVAILABLE' | 'BLUETOOTH_CONNECT_FAILED' |
+        'BLUETOOTH_ALREADY_CONNECTED' | 'BLUETOOTH_CONNECTION_LOST' | 'BLUETOOTH_UNSUPPORTED_OPERATION' |
         'BLUETOOTH_SERVICE_NOT_FOUND' | 'BLUETOOTH_CHARACTERISTIC_NOT_FOUND',
     message: string,
 }
@@ -58,7 +58,7 @@ declare interface BluetoothRemoteGATTCharacteristic {
 declare interface BluetoothRemoteGATTService {
     device: BluetoothDevice
     uuid: string
-    getCharacteristic(characteristicUUID: string): Promise<BluetoothRemoteGATTCharacteristic>	
+    getCharacteristic(characteristicUUID: string): Promise<BluetoothRemoteGATTCharacteristic>
 }
 
 declare interface BluetoothRemoteGATTServer {
@@ -120,19 +120,19 @@ declare type LIFFMessages = [LIFFMessage?, LIFFMessage?, LIFFMessage?, LIFFMessa
 declare global {
     namespace liff {
         /**
-         * Initialize a liff app. You can only call other LIFF SDK methods after calling liff.init(). 
+         * Initialize a liff app. You can only call other LIFF SDK methods after calling liff.init().
          * The LIFF SDK gets access tokens and ID tokens from the LINE platform when you initialize the LIFF app.
-         * @param config - LIFF app ID. Can be obtained when you add the LIFF app to your channel. 
+         * @param config - LIFF app ID. Can be obtained when you add the LIFF app to your channel.
          * @param initSuccessCallback - Callback to return a data object upon successful initialization of the LIFF app.
          * @param errorCallback - Callback to return an error object upon failure to initialize the LIFF app.
-         * 
+         *
          */
         function init(
             config: LIFFConfig,
             initSuccessCallback?: LiffInitSuccessCallback,
             errorCallback?: LiffInitErrorCallback,
         ): Promise<void>;
-        
+
         /**
          * Gets the environment in which the user is running the LIFF app.
          */
@@ -172,7 +172,7 @@ declare global {
 
         /**
          * Performs the LINE Login process (web login) for the Web app.
-         * 
+         *
          */
         function login(config?: LIFFLoginConfig): void
 
@@ -193,22 +193,22 @@ declare global {
             url: string,
             external?: boolean
         }): void;
-        
+
         /**
          * Gets the current user's access token.
          */
         function getAccessToken(): string;
-        
+
         /**
          * Gets the current user's profile.
          */
         function getProfile(): Promise<LINE.Profile>;
-        
+
         /**
          * Sends messages on behalf of the user to the chat screen where the LIFF app is opened.
          */
         function sendMessages(messages: LIFFMessages): Promise<void>;
-        
+
         /**
          * Starts LINE's QR code reader and gets the string read by the user. To start the QR code reader, grant ScanQR permission to the LIFF app in the LINE Developers Console.
          */
@@ -218,7 +218,7 @@ declare global {
          * Closes the LIFF app.
          */
         function closeWindow(): void;
-        
+
         /**
          * Enable the plugins.
          *
@@ -232,7 +232,7 @@ declare global {
          * Gets the ID token.
          */
         function getIDToken(): string;
-        
+
         /**
          * Gets the payload of the ID token that's automatically acquired by `liff.init()` The payload includes the user display name, profile image URL, and email address.
          */
@@ -259,7 +259,7 @@ declare global {
          *
          * The value of liff.id is null until you run liff.init().
          */
-        let id: string | null;
+        const id: string | null;
 
         const bluetooth: {
             /**

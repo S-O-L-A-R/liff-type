@@ -259,7 +259,7 @@ declare global {
          *
          * The value of liff.id is null until you run liff.init().
          */
-        let id: string | null;
+        const id: string | null;
 
         const bluetooth: {
             /**

@@ -144,6 +144,13 @@ declare global {
         function getVersion(): string
 
         /**
+         * Gets the user's LINE version.
+         *
+         * If a user opens the LIFF app using an external browser, null is returned.
+         */
+        function getLineVersion(): string | null;
+
+        /**
          * Gets the language settings of the environment in which the LIFF app is running.
          */
         function getLanguage(): string
@@ -246,6 +253,13 @@ declare global {
          * Gets the Promise object that resolves when you run liff.init() for the first time after starting the LIFF app. If you use liff.ready, you can execute any process after the completion of liff.init().
          */
         const ready: Promise<void>;
+
+        /**
+         * The property that holds the LIFF app ID (String type) passed to liff.init().
+         *
+         * The value of liff.id is null until you run liff.init().
+         */
+        const id: string | null;
 
         const bluetooth: {
             /**
